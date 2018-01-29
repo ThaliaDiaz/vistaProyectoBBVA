@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:pa="http://xmlns.jcp.org/jsf/passthrough">
+                <!--template="/WEB-INF/plantillas/plantillaReal.xhtml">-->
+
+    <!--<ui:define name="content">-->
+        <h:form>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="padding-bottom: 10px">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+
+                            <ui:repeat value="#{bannerBean.listaBanners}" var="prodPortada" varStatus="loop">
+                                <div class="item#{loop.index == 0? ' active':''}">
+                                    <img src="data:image/png;base64,${prodPortada.sImagen}" alt="" width="460" height="400"/>
+                                    <div class="carousel-caption">
+                                        <h3>#{prodPortada.titulo}</h3>
+                                        <p>#{prodPortada.titulo}</p>
+                                    </div>
+                                </div>
+                            </ui:repeat>
+                        </div>
+
+                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="fa fa-arrow-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                            <span class="fa fa-arrow-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+<!--                <div class="col-lg-12">
+                    <div id="timeline-grid" class="gridalicious">
+                        <div class="galcolumn" id="item0w5233" style="width: 48.8263%; padding-left: 10px; padding-bottom: 10px; box-sizing: border-box;">
+                            <ui:repeat value="#{indexBean.listaProducto}" var="producto" varStatus="loop">
+                                <div class="item" style="margin-bottom: 10px; zoom: 1; opacity: 1;">
+                                    <h:link outcome="verProducto">
+                                        <f:param name="idp" value="#{producto.id}" />
+                                        <img src="#{producto.imagen}" style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;"/>
+                                    </h:link>
+                                    <div class="tweet-wrapper">
+                                        <span class="text">#{producto.descripcion} <br/><a class="twtr-hyperlink"  href="#">Precio: S/ #{producto.precio}</a></span>
+                                    </div>
+                                </div>
+                            </ui:repeat>
+                             SE REPETI EL CODIGO PARA MOSTRAR MAS PRODUCTOS
+                            <ui:repeat value="#{indexBean.listaProducto}" var="producto" varStatus="loop">
+                                <div class="item" style="margin-bottom: 10px; zoom: 1; opacity: 1;">
+                                    <h:link outcome="verProducto">
+                                        <f:param name="idp" value="#{producto.id}" />
+                                        <img src="#{producto.imagen}" style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;"/>
+                                    </h:link>
+                                    <div class="tweet-wrapper">
+                                        <span class="text">#{producto.descripcion} <br/><a class="twtr-hyperlink"  href="#">Precio: S/ #{producto.precio}</a></span>
+                                    </div>
+                                </div>
+                            </ui:repeat>
+
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+
+        </h:form>
+
+
+        <style>
+/*            .carousel-inner > .item > img,
+            .carousel-inner > .item > a > img {
+                width: 100%;
+                max-height: 400px;
+                margin: auto;
+            }*/
+        </style>
+        <!--<input id="notificationMatricula"  type="button" class="btn btn-primary progress-button mrg-b-lg" style="display:none"/>-->
+
+<!--        <h:outputScript library="js" name="modernizr.custom.js" />
+        <h:outputScript library="js" name="classie.js" />
+        <h:outputScript library="js" name="notificationFx.js" />
+        <script>
+
+            $(document).ready(function () {
+                if (#{param.agregadoProducto == true}) {
+                    $("#notificationMatricula").click();
+                }
+                $("#timeline-grid").gridalicious({
+                    gutter: 10,
+                    width: 180,
+                    animate: true,
+                    animationOptions: {
+                        speed: 150,
+                        duration: 500
+                    },
+                });
+            });
+
+            (function () {
+                //Slide On Top effect
+                var bttnSlideOnTop = document.getElementById('notificationMatricula');
+
+                // make sure..
+                bttnSlideOnTop.disabled = false;
+
+                bttnSlideOnTop.addEventListener('click', function () {
+                    // simulate loading (for demo purposes only)
+                    classie.add(bttnSlideOnTop, 'active');
+                    classie.remove(bttnSlideOnTop, 'active');
+
+                    // create the notification
+                    var notification = new NotificationFx({
+                        message: '<span class="icon fa fa-bullhorn fa-2x"></span><p>Su producto se agrego a carrito de compra</p>',
+                        layout: 'bar',
+                        effect: 'slidetop',
+                        type: 'notice', // notice, warning or error
+                        onClose: function () {
+                            bttnSlideOnTop.disabled = false;
+                        }
+                    });
+
+                    // show the notification
+                    notification.show();
+
+                    // disable the button (for demo purposes only)
+                    this.disabled = true;
+                });
+            })();
+
+        </script>-->
+    <!--</ui:define>-->
+</ui:composition>

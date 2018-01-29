@@ -1,0 +1,4 @@
+pe\bbva\proyectobbva\view\bean\BannerBean.class
+pe\bbva\proyectobbva\view\scope\ViewScope.class
+pe\bbva\proyectobbva\view\listener\MyPhaseListener.class
+pe\bbva\proyectobbva\view\listener\ApplicationListener.class
