@@ -8,9 +8,27 @@
                 template="/WEB-INF/plantillas/plantillaReal.xhtml">
 
     <ui:define name="content">
-
-
-        <h2>vista 5</h2>   
+        <div class="col-lg-4"></div>
+        <h:form>    
+            <h:outputLabel styleClass="red" id="msjInf" value="Tarjeta de cargo" />
+            <h:outputLabel styleClass="red" id="msjInf" value="Servicio abonado" />
+            <h:outputLabel styleClass="red" id="msjInf" value="Empresa" />
+            <h:outputLabel styleClass="red" id="msjInf" value="Importe" />
+            <h:outputLabel styleClass="red" id="msjInf" value="Moneda" />
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <i class="fa fa-user"></i>
+                </span> 
+                <label>Codigo CCIP</label>
+                <h:inputText styleClass="form-control"/>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h:commandButton styleClass="btn btn-success col-xs-12" value="Conforme" action="#{confirmacionBean.confirmar}" />                                                    </div>
+            </div><br></br>
         
+
+        </h:form> 
+        <div class="col-lg-4"></div>
     </ui:define>
 </ui:composition>
