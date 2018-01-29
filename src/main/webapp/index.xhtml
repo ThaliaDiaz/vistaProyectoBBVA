@@ -27,8 +27,8 @@
                                     <div class="col-xs-12">
                                         <header id="login-header">
                                             <div id="login-logo">
-                                                <img alt="" src="resources/img/logo_transparente.png"/>
-                                                <span><b>BBVA</b></span>
+                                                <img alt="" height="500" src="resources/img/logoBBVA.png"/>
+                                                <!--<span><b></b></span>-->
                                             </div>
 
                                         </header>
@@ -40,38 +40,36 @@
                                                     <span class="input-group-addon">
                                                         <i class="fa fa-user"></i>
                                                     </span> 
-                                                    <h:inputText styleClass="form-control"/>
+                                                    <h:inputText styleClass="form-control" value="#{loginBean.usuario.dni}" p:placeholder="Ingresa tu DNI"/>
                                                 </div>
                                                 <div class="input-group">
                                                     <span class="input-group-addon">
                                                         <i class="fa fa-key"></i>
                                                     </span> 
+                                                    <h:inputSecret styleClass="form-control" value="#{loginBean.usuario.contrasenia}" p:placeholder="Ingresa tu contraseña"/>
                                                 </div>
                                                 <div id="remember-me-wrapper">
                                                     <div class="row">
                                                         <div class="col-xs-6">
                                                             <div class="checkbox-nice">                                                                
-                                                                
+
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-xs-12">
-                                                        <h:commandButton styleClass="btn btn-success col-xs-12" value="login" action="#{loginBean.autenticar}" />                                                    </div>
+                                                        <h:commandButton styleClass="btn btn-primary col-xs-12" value="Ingresar" action="#{loginBean.autenticar}" />                                                    </div>
                                                 </div><br></br>
                                                 <div class="row">
 
                                                     <div class="col-xs-12">
-                                                        <span class="social-text text-center">No tiene una cuenta?</span>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-xs-12">
+                                                        <!--<span class="social-text text-center">No tiene una cuenta?</span>-->
+                                                        <h:link value="No tiene una cuenta?"  outcome="index" />                                                        
 
-                                                        <h:link value="Registrarme" styleClass="btn btn-info col-xs-12" outcome="registro" />                                                        
                                                     </div>
                                                 </div>
+
 
                                             </h:form>                                            
                                         </div>
