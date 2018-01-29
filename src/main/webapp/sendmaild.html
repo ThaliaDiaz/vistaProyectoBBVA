@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <script src="resources/js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript">
+            var uri = 'http://10.17.180.247/api/SendMail';  
+            var data = {
+                            "email": "apolo140@hotmail.com",
+                            "CCIP": "CIPAS"
+                        }
+            $(document).ready(function()  
+            {  
+                // Send an AJAX request  
+                $.ajax({
+                    type: "POST",
+                    url: uri,
+                    data: data,
+                    success: function(){
+                            alert("email enviado a su bandeja de ena");
+                    },trada");
+                    },
+                    contentType: "json",
+                    dataType: "json"
+                  });
+            });  
+
+        </script>
+    </body>
+</html>
