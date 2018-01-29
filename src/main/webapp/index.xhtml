@@ -28,61 +28,57 @@
                                         <header id="login-header">
                                             <div id="login-logo">
                                                 <img alt="" src="resources/img/logo_transparente.png"/>
-                                                <span><b>Tienda Virtual</b></span>
+                                                <span><b>BBVA</b></span>
                                             </div>
-                                            
+
                                         </header>
                                         <div id="login-box-inner">                                            
-                                            <h:outputLabel styleClass="red" id="msjInf" value="#{loginBean.msjInfo}" />
-                                            <h:outputLabel styleClass="red" id="msjInt" value="#{loginBean.msjIntento}" />
+                                            <h:outputLabel styleClass="red" id="msjInf" value="" />
+                                            <h:outputLabel styleClass="red" id="msjInt" value="" />
                                             <h:form>    
                                                 <div class="input-group">
                                                     <span class="input-group-addon">
                                                         <i class="fa fa-user"></i>
                                                     </span> 
-                                                    <h:inputText styleClass="form-control" value="#{loginBean.usuario.login}" p:placeholder="#{msg.login_usuario}"/>
+                                                    <h:inputText styleClass="form-control"/>
                                                 </div>
                                                 <div class="input-group">
                                                     <span class="input-group-addon">
                                                         <i class="fa fa-key"></i>
                                                     </span> 
-                                                    <h:inputSecret styleClass="form-control" value="#{loginBean.usuario.password}" p:placeholder="#{msg.login_contrasena}"/>
                                                 </div>
                                                 <div id="remember-me-wrapper">
                                                     <div class="row">
                                                         <div class="col-xs-6">
                                                             <div class="checkbox-nice">                                                                
-                                                                <h:selectBooleanCheckbox value="#{loginBean.recuerdame}" id="remember" p:checked="checked"/>                        
-                                                                <h:outputLabel for="remember" value="#{msg.login_recuerdame}"/>
+                                                                
                                                             </div>
                                                         </div>
-                                                      <!--  <a class="col-xs-6" id="login-forget-link" href="#">¿Olvido su password? </a> -->
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-xs-12">
-                                                        <h:commandButton styleClass="btn btn-success col-xs-12" value="login" action="nuevoProducto.xhtml" />                                                        
-                                                    </div>
+                                                        <h:commandButton styleClass="btn btn-success col-xs-12" value="login" action="#{loginBean.autenticar}" />                                                    </div>
                                                 </div><br></br>
                                                 <div class="row">
-                                                    
+
                                                     <div class="col-xs-12">
                                                         <span class="social-text text-center">No tiene una cuenta?</span>
                                                     </div>
                                                 </div>
-                                                 <div class="row">
+                                                <div class="row">
                                                     <div class="col-xs-12">
-                                                        
+
                                                         <h:link value="Registrarme" styleClass="btn btn-info col-xs-12" outcome="registro" />                                                        
                                                     </div>
                                                 </div>
-                                               
+
                                             </h:form>                                            
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
