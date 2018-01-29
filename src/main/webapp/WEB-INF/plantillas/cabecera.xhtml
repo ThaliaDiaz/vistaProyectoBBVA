@@ -1,0 +1,111 @@
+<ui:component xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+              xmlns:h="http://xmlns.jcp.org/jsf/html"
+               xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+    <header class="navbar" id="header-navbar" >
+
+        <div class="container" style="padding:0px">
+            <!-- COMPRIMIR MENU-->
+
+            <div class="nav-no-collapse navbar-left pull-left hidden-sm hidden-xs" style="background-color: #2980b9" >
+                <ul class="nav navbar-nav navbar-left">
+                    <li>
+                        <a class="btn" id="make-small-nav">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a href="index.xhtml?s=ini" id="logo" class="navbar-brand" style="background-color: #2980b9">
+                <img src="resources/img/logo_transparente.png" class="normal-logo logo-white"/>
+                <span>#{msg.cabecera_tienda}</span>
+            </a>
+            <div class="clearfix">
+                <!-- MENU COLLAPSADO-->
+                <button class="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="fa fa-bars"></span>
+                </button>
+
+                <div class="nav-no-collapse pull-right" id="header-nav">
+
+                    <ul class="nav navbar-nav pull-right">
+
+                        <li class="hidden-xxs">
+                            <li class="dropdown hidden-xs">
+                                <a class="btn dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-language"></i>
+                                </a>
+                                <ul class="dropdown-menu notifications-list">
+                                    <li class="pointer">
+                                        <div class="pointer-inner">
+                                            <div class="arrow"></div>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <h:form>
+                                            <h:commandLink style="color: #000; font-family: serif; font-size : 12px" value="Español" action="#{idiomaBean.cambiaEspanol}"></h:commandLink>
+                                        </h:form>
+                                    </li>
+                                    <li class="item">
+                                        <h:form>
+                                            <h:commandLink style="color: #000; font-family: serif; font-size : 12px" value="Ingles" action="#{idiomaBean.cambiaIngles}"></h:commandLink>
+                                        </h:form>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </li>
+
+                        <li class="mobile-search">
+                            <a class="btn" style="#{user.perfil=='admin'? 'display: none':''}">
+                                <i class="fa fa-search"></i>
+                            </a>
+
+                            <div class="drowdown-search">
+                                <h:form p:role="search">
+                                    <div class="form-group">
+                                <h:inputText class="form-control" p:placeholder="Buscar producto..." p:required="true" value="#{indexBean.textoBuscar}" />                                
+                                
+                                 <h:commandLink action="#{indexBean.busqueda}"><i class="fa fa-search nav-search-icon"></i></h:commandLink>
+                                </div>
+                                    
+                            </h:form>
+
+                            </div>
+                            
+                           
+                            
+                        </li>
+                        <li class="dropdown hidden-xs">
+                            <a href="./pedidosPendientes.xhtml" style="#{user.perfil=='admin'? 'display: none':''}">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span class="count">#{empty pedido.listaPedidos?0:pedido.listaPedidos.size()}</span>
+                            </a>
+                        </li>
+                        <li class="hidden-xxs">
+                            <a class="btn" href="./login.xhtml" style="#{user.login!=null? 'display: none':''}">
+                                <i class="fa fa-user"></i>
+                                <span>#{msg.cabecera_iniciar}</span>
+
+                            </a>
+                        </li>
+
+                        <li>
+                            <h:form>
+                                <h:commandLink  class="btn" action="#{loginBean.logout()}" style="#{user.login==null? 'display: none':''}">
+                                    <i class="fa fa-power-off"></i><span> #{msg.cabecera_salir}</span>
+                                </h:commandLink>
+                            </h:form>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </header>
+</ui:component>
