@@ -30,6 +30,16 @@ public class loginBean {
         return "vista3.xhtml?faces-redirect=true&s=ini";
 
     }
+     public String gotoP4() {
+        System.out.println("dentro de bean");
+        return "vista4.xhtml?faces-redirect=true&s=ini";
+
+    }
+     public String gotoP5() {
+        System.out.println("dentro de bean");
+        return "vista5.xhtml?faces-redirect=true&s=ini";
+
+    }
 
     public Usuario getUsuario() {
         return usuario;

@@ -13,7 +13,7 @@
         <h:outputStylesheet library="css" name="nanoscroller.css"/>
         <h:outputStylesheet library="css" name="theme_styles.css"/>
         <h:outputStylesheet library="css" name="css.css"/>        
-        <link type="image/x-icon" href="resources/img/logo_transparente_title.png" rel="shortcut icon"></link>        
+        <link type="image/x-icon" href="resources/img/logoPestañaBBVA.jpg" rel="shortcut icon"></link>        
 
     </h:head>
     <h:body id="login-page-full">
@@ -51,26 +51,20 @@
                                                 <div id="remember-me-wrapper">
                                                     <div class="row">
                                                         <div class="col-xs-6">
-                                                            <div class="checkbox-nice">                                                                
-
-                                                            </div>
+                                                             <a href="forgot-password-full.html" id="login-forget-link" class="col-xs-6">
+                                                            Registrarse?
+                                                        </a>
                                                         </div>
+                                                        <a href="forgot-password-full.html" id="login-forget-link" class="col-xs-6">
+                                                            Olvidó su contraseña?
+                                                        </a>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-xs-12">
-                                                        <h:commandButton styleClass="btn btn-primary col-xs-12" value="Ingresar" action="#{loginBean.autenticar}" />                                                    </div>
+                                                        <h:commandButton styleClass="btn btn-primary col-xs-12" value="Ingresar" action="#{loginBean.autenticar}" />                                                    
+                                                    </div>
                                                 </div><br></br>
-                                                <div class="row">
-
-                                                    <div class="col-xs-12">
-                                                        <!--<span class="social-text text-center">No tiene una cuenta?</span>-->
-                                                        <h:link value="No tiene una cuenta?"  outcome="index" />                                                        
-
-                                                    </div>
-                                                </div>
-
-
                                             </h:form>                                            
                                         </div>
                                     </div>

@@ -9,9 +9,49 @@
 
     <ui:define name="content">
 
+        <div class="col-sm-6 col-sm-offset-3 form-box">
+            <br></br>
+            <h:form>
+                <h1><center>VALIDACIÓN DE PAGO</center></h1>
+                <div id="validacion-pago">
+                    <div class="form-group">
+                        <span>Cuenta de Pago: </span>
+                        <h:outputLabel styleClass="red" id="cpago" value="55433212121212121" />
+                    </div>
+                    <div class="form-group">
+                        <span>Nombre de la Empresa a Pagar: </span>
+                        <h:outputLabel styleClass="red" id="nombempresa" value="Movistar" />
+                    </div>
+                    <div class="form-group">
+                        <span >Nombre del Servicio: </span>
+                        <h:outputLabel styleClass="red" id="nomservicio" value="Internet" />
+                    </div>
 
-        <h2>vista 4</h2>   
-        <h:commandButton styleClass="btn btn-success col-xs-12" value="vista 5" action="vista5" />
-        
+                    <div class="form-group">
+                        <span>Importe: </span>
+                        <h:outputLabel styleClass="red" id="importe" value="S/100.00" />
+                    </div>
+                    <div class="form-group">
+                        <span>Moneda: </span>
+                        <h:outputLabel styleClass="red" id="moneda" value="Soles" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="codValidacion" class="col-lg-2 control-label">Código de Validación: </label>
+                        <div class="col-lg-4">
+                            <input type="email" class="form-control" id="codValidacion" p:placeholder="escribe codigo"></input>
+                        </div>
+                    </div>
+                    <br></br>
+                    <br></br>
+                    <div class="col-lg-offset-2 col-lg-10">
+                        <button type="submit" class="btn btn-success">Confirmar Pago</button>
+                    </div>
+
+                </div>
+
+            </h:form>
+            <br></br>
+        </div>
     </ui:define>
 </ui:composition>

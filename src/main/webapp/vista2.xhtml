@@ -8,11 +8,70 @@
                 template="/WEB-INF/plantillas/plantillaReal.xhtml">
 
     <ui:define name="content">
-        <h:form>
 
-            <h2>vista 2</h2>   
-            <h:commandButton styleClass="btn btn-success col-xs-12" value="vista 3" action="#{loginBean.gotoP3}" />
-        </h:form>
+        <br></br>
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2 text">
+                <h1><center>Modulo De Pagos</center></h1>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3 form-box">
+                <div class="form-top">
+                    <div class="form-top-left">
+                        <h3>Ingrese info del pago</h3>
+                    </div>
+                </div>
+                <div class="form-bottom">
+                    <!--<form role="form" action="" method="post" class="form">-->
+                    <h:form>
+
+                        <div class="form-group">
+                            <label class="sr-only">Empresa</label>
+                            <select class="form-control" id="country" name ="country"></select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="sr-only">Servicio</label>
+                            <select class="form-control" name ="state" id ="state"></select>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="sr-only">CCIP</label>
+                            <input type="text" name="contrato" placeholder="CCIP o contrato  . . ." required="true" class="form-control" id="form-username"></input>
+                        </div>
+
+
+                        <div class="form-group">
+                            <button type="button" class="btn btn-info">Validar deuda</button>
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-group-addon"> S/. </span>
+                            <input name="monto" id="monto" type="text" required="true" class="form-control" value="450.50"></input>
+                        </div>
+
+                        <div class="input-group">
+                            <h:commandButton styleClass="btn btn-primary col-xs-12" value="Elegir Tarjeta" action="#{loginBean.gotoP3()}" /> 
+                        </div>
+                    </h:form>
+                </div>
+                <!--<button type="submit" class="btn btn-primary" >Elegir tarjeta!</button>-->
+            </div>
+        </div>
+
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+        <script type= "text/javascript" src = "assets/js/services.js"></script>
+
+        <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
 
     </ui:define>
 </ui:composition>
