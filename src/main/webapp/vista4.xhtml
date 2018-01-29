@@ -39,13 +39,13 @@
                     <div class="form-group">
                         <label for="codValidacion" class="col-lg-2 control-label">Código de Validación: </label>
                         <div class="col-lg-4">
-                            <input type="email" class="form-control" id="codValidacion" p:placeholder="escribe codigo"></input>
+                            <input type="text" class="form-control" id="codValidacion" p:placeholder="escribe codigo" required="true"></input>
                         </div>
                     </div>
                     <br></br>
                     <br></br>
                     <div class="col-lg-offset-2 col-lg-10">
-                        <button type="submit" class="btn btn-success">Confirmar Pago</button>
+                        <h:commandButton styleClass="btn btn-primary" value="Confirmar Pago" action="#{loginBean.gotoP5}" /> 
                     </div>
 
                 </div>

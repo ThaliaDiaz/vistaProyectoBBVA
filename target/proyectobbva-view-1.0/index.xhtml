@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
     <h:head>
         <META charset="UTF-8"/> 
         <title>BBVA Continental</title>
@@ -40,20 +41,20 @@
                                                     <span class="input-group-addon">
                                                         <i class="fa fa-user"></i>
                                                     </span> 
-                                                    <h:inputText styleClass="form-control" value="#{loginBean.usuario.dni}" p:placeholder="Ingresa tu DNI"/>
+                                                    <h:inputText styleClass="form-control" value="#{loginBean.usuario.dni}" p:placeholder="Ingresa tu DNI" maxlength="8" required="true" />
                                                 </div>
                                                 <div class="input-group">
                                                     <span class="input-group-addon">
                                                         <i class="fa fa-key"></i>
                                                     </span> 
-                                                    <h:inputSecret styleClass="form-control" value="#{loginBean.usuario.contrasenia}" p:placeholder="Ingresa tu contraseña"/>
+                                                    <h:inputSecret styleClass="form-control" value="#{loginBean.usuario.contraseña}" p:placeholder="Ingresa tu contraseña"/>
                                                 </div>
                                                 <div id="remember-me-wrapper">
                                                     <div class="row">
                                                         <div class="col-xs-6">
-                                                             <a href="forgot-password-full.html" id="login-forget-link" class="col-xs-6">
-                                                            Registrarse?
-                                                        </a>
+                                                            <a href="forgot-password-full.html" id="login-forget-link" class="col-xs-6">
+                                                                Registrarse?
+                                                            </a>
                                                         </div>
                                                         <a href="forgot-password-full.html" id="login-forget-link" class="col-xs-6">
                                                             Olvidó su contraseña?
@@ -65,7 +66,8 @@
                                                         <h:commandButton styleClass="btn btn-primary col-xs-12" value="Ingresar" action="#{loginBean.autenticar}" />                                                    
                                                     </div>
                                                 </div><br></br>
-                                            </h:form>                                            
+                                            </h:form>         
+                                           
                                         </div>
                                     </div>
                                 </div>
